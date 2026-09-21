@@ -1,0 +1,88 @@
+:root {
+  --paper: #f4f1ea;
+  --surface: rgba(255, 253, 249, .9);
+  --ink: #24332e;
+  --deep: #17483d;
+  --green: #2d806b;
+  --orange: #e1784f;
+  --line: rgba(36, 51, 46, .12);
+}
+
+body {
+  background: #f4f1ea;
+  letter-spacing: .01em;
+}
+
+.app-shell {
+  background: radial-gradient(circle at 86% 8%, rgba(227, 177, 91, .2), transparent 24rem),
+    radial-gradient(circle at 24% 90%, rgba(80, 145, 119, .14), transparent 28rem),
+    linear-gradient(135deg, #f7f4ee 0%, #edf1e9 100%);
+}
+
+.sidebar {
+  background: rgba(247, 244, 237, .8);
+  border-right-color: var(--line);
+  backdrop-filter: blur(18px);
+}
+
+.brand-mark {
+  border-radius: 50%;
+  box-shadow: 0 7px 16px rgba(225, 120, 79, .28);
+}
+
+.nav-item,
+.primary-btn,
+.outline-btn,
+.panel,
+.goal-banner,
+.macro-card {
+  transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+}
+
+.nav-item:hover,
+.macro-card:hover,
+.panel:hover {
+  transform: translateY(-2px);
+}
+
+.panel,
+.macro-card,
+.goal-banner {
+  border: 1px solid rgba(36, 51, 46, .08);
+  box-shadow: 0 18px 42px rgba(43, 61, 51, .07);
+}
+
+.panel {
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+}
+
+.primary-btn {
+  background: var(--deep);
+  box-shadow: 0 10px 20px rgba(23, 72, 61, .2);
+}
+
+.primary-btn:hover {
+  background: #236653;
+  transform: translateY(-2px);
+}
+
+.goal-banner {
+  background: linear-gradient(110deg, #dcecdf, #f2e9d6 90%);
+}
+
+.tip-panel {
+  background: linear-gradient(145deg, #1c5044, #307866);
+  color: #f6f0e5;
+}
+
+@media (max-width: 760px) {
+  .sidebar {
+    background: #f7f4ed;
+  }
+
+  .panel,
+  .macro-card {
+    box-shadow: 0 10px 24px rgba(43, 61, 51, .06);
+  }
+}
